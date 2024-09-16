@@ -40,7 +40,7 @@ This repository contains a JavaScript implementation for finding the constant te
 
 Ensure you have created a package.json file by running:
 
-```sh
+sh
 npm init -y
 This command will generate a default package.json file required for managing Node.js dependencies.
 
@@ -92,6 +92,7 @@ In the project directory, create a file named input.json and add your JSON input
         "value": "642121030037605"
     }
 }
+
 4.**Add the JavaScript Code**
 
 Create a file named shamir.js in the project directory and add the following code:
