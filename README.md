@@ -40,8 +40,9 @@ This repository contains a JavaScript implementation for finding the constant te
 
 Ensure you have created a package.json file by running:
 
-sh
+```sh
 npm init -y
+```
 This command will generate a default package.json file required for managing Node.js dependencies.
 
 3.**Create the Input File**
@@ -50,49 +51,29 @@ In the project directory, create a file named input.json and add your JSON input
 
 ```json
 
-{
+ {
     "keys": {
-        "n": 9,
-        "k": 6
+        "n": 4,
+        "k": 3
     },
     "1": {
         "base": "10",
-        "value": "28735619723837"
+        "value": "4"
     },
     "2": {
-        "base": "16",
-        "value": "1A228867F0CA"
-    },
+        "base": "2",
+        "value": "111"
+        
     "3": {
-        "base": "12",
-        "value": "32811A4AA0B7B"
-    },
-    "4": {
-        "base": "11",
-        "value": "917978721331A"
-    },
-    "5": {
-        "base": "16",
-        "value": "1A22886782E1"
+        "base": "10",
+        "value": "12"
     },
     "6": {
-        "base": "10",
-        "value": "28735619654702"
-    },
-    "7": {
-        "base": "14",
-        "value": "71AB5070CC4B"
-    },
-    "8": {
-        "base": "9",
-        "value": "122662581541670"
-    },
-    "9": {
-        "base": "8",
-        "value": "642121030037605"
+        "base": "4",
+        "value": "213"
     }
 }
-
+```
 4.**Add the JavaScript Code**
 
 Create a file named shamir.js in the project directory and add the following code:
@@ -152,13 +133,14 @@ try {
 } catch (error) {
     console.error('Error reading or parsing JSON file:', error.message);
 }
+```
 5.**Run the Script**
 
 Execute the script with Node.js to compute the constant term:
 
 ```sh
 
-node shamir.js
+node polynomial.js
 This command will read from input.json, decode the values, perform polynomial interpolation, and print the constant term to the console.
 
 Example Output
